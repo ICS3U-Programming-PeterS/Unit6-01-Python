@@ -38,5 +38,6 @@ def main():
     print(f"The average of the 10 numbers generated is: {average}")
 
 
+
 if __name__ == "__main__":
     main()
