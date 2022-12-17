@@ -27,8 +27,7 @@ def main():
 
     # displays random numbers and calculates average
     for counter in range(constants.MAX_ARRAY_SIZE):
-        list_of_ints.append(random.randint(constants.MIN_NUM,
-                                           constants.MAX_NUM))
+        list_of_ints.append(random.randint(constants.MIN_NUM, constants.MAX_NUM))
         sum = sum + list_of_ints[counter]
         print(
             "{} added to the list at "
