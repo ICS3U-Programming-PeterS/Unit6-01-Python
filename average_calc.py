@@ -10,33 +10,37 @@ import random
 import constants
 
 
-def sum_of_numbers(list_of_numbers):
+def average_of_numbers(list_of_numbers):
     # this functions add up all the numbers in the list
 
-    total = 0
+    median = 0
 
     for counter in range(0, len(list_of_numbers)):
-        total += list_of_numbers[counter]
+        median += list_of_numbers[counter]
 
-    return total
+    median = median / constants.MAX_ARRAY_SIZE
+    return median
 
 
 def main():
     # this function uses a list
 
     random_numbers = []
-    sum = 0
+    average = 0
 
     # input
     print("The numbers are ")
     for loop_counter in range(constants.MAX_ARRAY_SIZE):
         a_single_number = random.randint(0, 100)
         random_numbers.append(a_single_number)
-        print("{} added at position {}".format(a_single_number, loop_counter))
+        if a_single_number < 10:
+            print("{}  added at position {}".format(a_single_number, loop_counter))
+        else:
+            print("{} added at position {}".format(a_single_number, loop_counter))
 
-    sum = sum_of_numbers(random_numbers)
+    average = average_of_numbers(random_numbers)
 
-    print("\nThe sum of all the numbers is: {0} ".format(sum))
+    print("\nThe average of all the numbers is: {0} ".format(average))
 
 
 if __name__ == "__main__":
