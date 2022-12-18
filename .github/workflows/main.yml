@@ -14,38 +14,39 @@ jobs:
 
  run-linters:
 
-  name: Mr Coxall's Super Linter
+   name: Mr Coxall's Super Linter
 
-  runs-on: ubuntu-latest
-
-
-  steps:
-
-    - name: Check out Git repository
-
-      uses: actions/checkout@main
+   runs-on: ubuntu-latest
 
 
-    - name: Run GitHub Super Linter
 
-      uses: github/super-linter@main
+   steps:
 
-      env:
+     - name: Check out Git repository
 
-        VALIDATE_ALL_CODEBASE: true
+       uses: actions/checkout@main
 
-        LINTER_RULES_PATH: /
 
-        VALIDATE_CLANG_FORMAT: false
+     - name: Run GitHub Super Linter
 
-        VALIDATE_JAVASCRIPT_STANDARD: false
+       uses: github/super-linter@main
 
-        VALIDATE_PYTHON_FLAKE8: false
+       env:
 
-        VALIDATE_GITLEAKS: false # for secrets detection
+         VALIDATE_ALL_CODEBASE: true
 
-        VALIDATE_JSCPD: false # for copy and paste detection
+         LINTER_RULES_PATH: /
 
-        DEFAULT_BRANCH: main
+         VALIDATE_CLANG_FORMAT: false
 
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         VALIDATE_JAVASCRIPT_STANDARD: false
+
+         VALIDATE_PYTHON_FLAKE8: false
+
+         VALIDATE_GITLEAKS: false # for secrets detection
+
+         VALIDATE_JSCPD: false # for copy and paste detection
+
+         DEFAULT_BRANCH: main
+
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
