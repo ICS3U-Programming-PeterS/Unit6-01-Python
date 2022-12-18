@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Created by: Peter Sobowale
-# Created on: Dec 16, 2022
+# Created on: Dec 15, 2022
 # This program uses a for loop to generate and
 # print random numbers in a list, then
 # displays the average to the console
